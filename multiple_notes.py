@@ -37,4 +37,4 @@ for i in notes:
     print(f"   Статус: {i['status']}")
     print("   Дата создания: {}-{}-{}".format(created_date.day, created_date.month, created_date.year))
     print("   Дедлайн: {}-{}-{}".format(issue_date.day, issue_date.month, issue_date.year))
-
+    
