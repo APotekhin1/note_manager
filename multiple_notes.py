@@ -5,8 +5,8 @@ notes = [] # начальное значение вводимого списка
 while answer != 'стоп' and answer != 'нет':
     # ввод текущего элемента
     name = input("Введите имя пользователя: ")
-    content = input("Введите заголовок заметки: ")
-    title = input("Введите описание заметки: ")
+    title = input("Введите заголовок заметки: ")
+    content = input("Введите описание заметки: ")
     status = input("Введите статус заметки (новая, в процессе, выполнено): ")
     while True:  # цикл для определения корректной даты ввода
         created_date = input("Введите дату создания (день-месяц-год): ")
@@ -20,8 +20,8 @@ while answer != 'стоп' and answer != 'нет':
     # создание элемента списка в виде словаря
     note = {
         "name": name,
-        "content": content,
         "title": title,
+        "content": content,
         "status": status,
         "created_date": created_date,
         "issue_date": issue_date
@@ -32,9 +32,8 @@ while answer != 'стоп' and answer != 'нет':
 print("\nСписок заметок:")
 for i in notes:
     print(f"   Имя: {i['name']}")
-    print(f"   Заголовок: {i['content']}")
-    print(f"   Описание: {i['title']}")
+    print(f"   Заголовок: {i['title']}")
+    print(f"   Описание: {i['content']}")
     print(f"   Статус: {i['status']}")
     print("   Дата создания: {}-{}-{}".format(created_date.day, created_date.month, created_date.year))
     print("   Дедлайн: {}-{}-{}".format(issue_date.day, issue_date.month, issue_date.year))
-    
