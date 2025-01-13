@@ -7,9 +7,7 @@ print('2. в процессе')
 print('3. отложено')
 status = input()
 # цикл определяет верность ввода статуса
-while (status != '1' and status != '2' and
-    status != '3' and status != 'выполнено' and
-    status != 'в процессе' and status != 'отложено'):
+while status not in ['1', '2', '3', 'выполнено', 'в процессе', 'отложено']:
     print('Ввод неверен')
     print('Выберите новый статус заметки:')
     print('1. выполнено')
